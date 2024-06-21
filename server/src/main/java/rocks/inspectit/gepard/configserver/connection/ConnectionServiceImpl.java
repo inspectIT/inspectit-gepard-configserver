@@ -1,6 +1,5 @@
 package rocks.inspectit.gepard.configserver.connection;
 
-import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -8,7 +7,6 @@ import rocks.inspectit.gepard.configserver.agent.Agent;
 import rocks.inspectit.gepard.configserver.connection.model.ConnectRequest;
 import rocks.inspectit.gepard.configserver.connection.model.ConnectRequestType;
 import rocks.inspectit.gepard.configserver.connection.model.ConnectResponse;
-import rocks.inspectit.gepard.configserver.exceptions.EntityCreationException;
 
 @Service
 @RequiredArgsConstructor
