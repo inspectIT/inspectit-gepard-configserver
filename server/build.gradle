@@ -1,0 +1,54 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.3.0'
+	id 'io.spring.dependency-management' version '1.1.5'
+	id("com.diffplug.spotless") version "6.25.0"
+}
+
+group = 'rocks.inspectit.gepard'
+version = '0.0.1-SNAPSHOT'
+
+java {
+	sourceCompatibility = '17'
+}
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+
+	// Starters
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-actuator'
+	implementation 'org.springframework.boot:spring-boot-starter-validation'
+	// implementation "org.springframework.boot:spring-boot-starter-security"
+	compileOnly 'org.projectlombok:lombok'
+	runtimeOnly 'org.postgresql:postgresql'
+	annotationProcessor 'org.projectlombok:lombok'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'org.springframework.amqp:spring-rabbit-test'
+	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+	// Third-Party
+
+	//Ldap
+	//runtimeOnly 'com.unboundid:unboundid-ldapsdk:6.0.11'
+	// implementation 'org.springframework.security:spring-security-ldap:6.3.0'
+	//JWT
+	// implementation 'io.jsonwebtoken:jjwt-api:0.12.5'
+	// Apache Commons
+	// implementation 'commons-io:commons-io:2.16.1'
+
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}

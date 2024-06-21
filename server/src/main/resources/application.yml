@@ -1,0 +1,26 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/gepard
+    username: gepard
+    password: password
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+authentication:
+  jwt:
+    secret_key: 10149bda670af558c8db91093539d77a181979dc682d3339fc369ba25c35ad5d
+    expiration_time: 30m
+
+logging:
+  level:
+    org:
+      springframework:
+        security: DEBUG
