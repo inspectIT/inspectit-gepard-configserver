@@ -11,7 +11,7 @@ export default function connectionTableActions({
   return (
     <Link
       className={buttonVariants({ variant: "outline" })}
-      href={`agent-settings?connection=${id}`}
+      href={`agent-settings/?connection=${id}`}
     >
       Open
     </Link>
