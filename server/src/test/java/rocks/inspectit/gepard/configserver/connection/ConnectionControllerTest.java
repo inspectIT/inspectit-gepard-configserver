@@ -21,12 +21,13 @@ public class ConnectionControllerTest {
 
     @Test
     public void connect_whenFieldIsMissing_shouldReturnBadRequest() throws Exception {
-        String requestJson = "{\n" +
-                "    \"serviceName\": \"customer-service-e\",\n" +
-                "    \"pid\": \"67887\",\n" +
-                "    \"gepardVersion\": \"0.0.1\",\n" +
-                "    \"otelVersion\": \"1.26.8\"\n" +
-                "}"; // JSON with lastJVMRestart missing
+        String requestJson = """
+                {
+                    "serviceName": "customer-service-e",
+                    "pid": "67887",
+                    "gepardVersion": "0.0.1",
+                    "otelVersion": "1.26.8"
+                }"""; // JSON with some fields missing
 
         mockMvc.perform(post("/api/v1/connection/connect")
                         .contentType(MediaType.APPLICATION_JSON)

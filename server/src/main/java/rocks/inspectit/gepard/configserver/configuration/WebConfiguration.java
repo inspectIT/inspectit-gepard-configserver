@@ -1,6 +1,7 @@
 package rocks.inspectit.gepard.configserver.configuration;
 
 
+import jakarta.annotation.Nonnull;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.context.annotation.Configuration;
 
@@ -53,15 +54,15 @@ public class WebConfiguration implements WebMvcConfigurer {
                 .addResourceLocations(location.endsWith("/") ? location : location + "/")
                 .resourceChain(false)
                 // When the static assets are found return them,
-                // Else fallback to index.html and let React handle the rest.
+                // Else fallback to 404.html and let next handle the rest.
                 .addResolver(new PathResourceResolver() {
                     @Override
-                    public Resource resolveResource(HttpServletRequest request, String requestPath, List<? extends Resource> locations, ResourceResolverChain chain) {
+                    public Resource resolveResource(HttpServletRequest request, @Nonnull String requestPath, @Nonnull List<? extends Resource> locations, @Nonnull ResourceResolverChain chain) {
                         Resource resource = super.resolveResource(request, requestPath, locations, chain);
                         if(nonNull(resource)) {
                             return resource;
                         }
-                        return super.resolveResource(request, "/index.html", locations, chain);
+                        return super.resolveResource(request, "/404.html", locations, chain);
                     }
                 });
     }

@@ -1,0 +1,5 @@
+rootProject.name = 'inspectit-gepard-configserver'
+include 'server'
+// Switch between the two client side projects.
+// include 'client'
+include 'ui'

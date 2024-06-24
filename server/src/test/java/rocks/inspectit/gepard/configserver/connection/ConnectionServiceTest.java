@@ -1,13 +1,10 @@
 package rocks.inspectit.gepard.configserver.connection;
 
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
 import rocks.inspectit.gepard.configserver.agent.Agent;
 import rocks.inspectit.gepard.configserver.connection.model.ConnectRequest;
 import rocks.inspectit.gepard.configserver.connection.model.ConnectRequestType;
@@ -16,7 +13,6 @@ import rocks.inspectit.gepard.configserver.connection.model.ConnectResponse;
 import java.util.Date;
 import java.util.Optional;
 
-import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.Mockito.when;
@@ -38,7 +34,7 @@ public class ConnectionServiceTest {
                 .pid("21434")
                 .gepardVersion("0.0.1")
                 .otelVersion("1.26.8")
-                .lastJVMRestart(new Date())
+                .startTime(new Date())
                 .build();
 
         when(connectionRepository.existsByPid(connectRequest.getPid())).thenReturn(false);
@@ -60,7 +56,7 @@ public class ConnectionServiceTest {
                 .pid("21434")
                 .gepardVersion("0.0.1")
                 .otelVersion("1.26.8")
-                .lastJVMRestart(new Date())
+                .startTime(new Date())
                 .build();
 
         when(connectionRepository.existsByPid(connectRequest.getPid())).thenReturn(true);

@@ -47,8 +47,12 @@ dependencies {
 	// Apache Commons
 	// implementation 'commons-io:commons-io:2.16.1'
 
+	// UI - It is super easy to just switch back and forth between the two client side projects.
+	// runtimeOnly project(':client')
+	runtimeOnly project(':ui')
 }
 
 tasks.named('test') {
 	useJUnitPlatform()
 }
+

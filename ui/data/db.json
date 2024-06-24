@@ -1,0 +1,95 @@
+{
+  "connections": [
+    {
+      "serviceName": "customer-service-e",
+      "pid": "67887",
+      "gepardVersion": "0.0.1",
+      "otelVersion": "1.26.8",
+      "lastJVMRestart": "2024-06-12"
+    },
+    {
+      "serviceName": "customer-service-e",
+      "pid": "67887",
+      "gepardVersion": "0.0.1",
+      "otelVersion": "1.26.8",
+      "lastJVMRestart": "2024-06-12"
+    },
+    {
+      "serviceName": "customer-service-e",
+      "pid": "67887",
+      "gepardVersion": "0.0.1",
+      "otelVersion": "1.26.8",
+      "lastJVMRestart": "2024-06-12"
+    },
+    {
+      "serviceName": "customer-service-e",
+      "pid": "67887",
+      "gepardVersion": "0.0.1",
+      "otelVersion": "1.26.8",
+      "lastJVMRestart": "2024-06-12"
+    },
+    {
+      "serviceName": "customer-service-e",
+      "pid": "67887",
+      "gepardVersion": "0.0.1",
+      "otelVersion": "1.26.8",
+      "lastJVMRestart": "2024-06-12"
+    },
+    {
+      "serviceName": "customer-service-e",
+      "pid": "67887",
+      "gepardVersion": "0.0.1",
+      "otelVersion": "1.26.8",
+      "lastJVMRestart": "2024-06-12"
+    },
+    {
+      "serviceName": "customer-service-e",
+      "pid": "67887",
+      "gepardVersion": "0.0.1",
+      "otelVersion": "1.26.8",
+      "lastJVMRestart": "2024-06-12"
+    },
+    {
+      "serviceName": "customer-service-e",
+      "pid": "67887",
+      "gepardVersion": "0.0.1",
+      "otelVersion": "1.26.8",
+      "lastJVMRestart": "2024-06-12"
+    },
+    {
+      "serviceName": "customer-service-e",
+      "pid": "67887",
+      "gepardVersion": "0.0.1",
+      "otelVersion": "1.26.8",
+      "lastJVMRestart": "2024-06-12"
+    },
+    {
+      "serviceName": "customer-service-e",
+      "pid": "67887",
+      "gepardVersion": "0.0.1",
+      "otelVersion": "1.26.8",
+      "lastJVMRestart": "2024-06-12"
+    },
+    {
+      "serviceName": "customer-service-e",
+      "pid": "67887",
+      "gepardVersion": "0.0.1",
+      "otelVersion": "1.26.8",
+      "lastJVMRestart": "2024-06-12"
+    },
+    {
+      "serviceName": "customer-service-e",
+      "pid": "67887",
+      "gepardVersion": "0.0.1",
+      "otelVersion": "1.26.8",
+      "lastJVMRestart": "2024-06-12"
+    },
+    {
+      "serviceName": "customer-service-e",
+      "pid": "67887",
+      "gepardVersion": "0.0.1",
+      "otelVersion": "1.26.8",
+      "lastJVMRestart": "2024-06-12"
+    }
+  ]
+}

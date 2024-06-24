@@ -1,0 +1,63 @@
+plugins {
+    id "com.github.node-gradle.node" version "7.0.2"
+    id 'base'
+}
+
+repositories {
+    mavenCentral()
+}
+
+node {
+    /* gradle-node-plugin configuration
+       https://github.com/srs/gradle-node-plugin/blob/master/docs/node.md
+
+       Task name pattern:
+       ./gradlew npm_<command> Executes an NPM command.
+    */
+
+    // Version of node to use.
+    version = '20.9.0'
+
+    // Version of npm to use.
+    npmVersion = ''
+
+    // If true, it will download node using above parameters.
+    // If false, it will try to use globally installed node.
+    download = true
+}
+
+tasks.register("packageNpmApp", Zip) {
+    dependsOn npm_run_build
+    doLast {
+        archiveBaseName = 'client'
+        archiveExtension = 'jar'
+        destinationDirectory = file("${projectDir}/build_packageClient")
+        from 'build' {
+            into 'static'
+        }
+    }
+
+}
+
+npm_run_build {
+    inputs.files fileTree('src')
+    inputs.files fileTree('public')
+    inputs.file 'package.json'
+    inputs.file 'package-lock.json'
+
+    outputs.dir 'build'
+}
+
+configurations {
+    npmResources
+}
+
+artifacts {
+    npmResources packageNpmApp
+}
+
+clean {
+    delete packageNpmApp.archivePath
+}
+
+

@@ -5,9 +5,9 @@ import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
-import lombok.RequiredArgsConstructor;
-import org.springframework.validation.annotation.Validated;
 
+import java.time.Instant;
+import java.time.LocalDate;
 import java.util.Date;
 
 @Data
@@ -15,15 +15,17 @@ import java.util.Date;
 @Builder
 public class ConnectRequest {
 
-    @NotNull(message = "Service name must not be null")
+    @NotNull(message = "Agent name must not be null")
     private String serviceName;
-    @NotNull(message = "PID must not be null")
-    private String pid;
     @NotNull(message = "Gepard version must not be null")
     private String gepardVersion;
     @NotNull(message = "Otel version must not be null")
     private String otelVersion;
-    @NotNull(message = "Last JVM restart must not be null")
-    private Date lastJVMRestart;
+    @NotNull(message = "PID must not be null")
+    private Long pid;
+    @NotNull(message = "Start Time must not be null")
+    private String startTime;
+    @NotNull(message = "Java version must not be null")
+    private String javaVersion;
 
 }

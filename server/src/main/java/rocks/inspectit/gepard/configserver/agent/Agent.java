@@ -7,30 +7,31 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.Instant;
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.UUID;
 
-@Entity
-@Table
+
 @Data
 @Builder
+@Embeddable
 @AllArgsConstructor
 @NoArgsConstructor
 public class Agent {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private UUID id;
     // The Service name, which is provided by the agent
     @Nonnull
     private String serviceName;
     @Nonnull
-    private String pid;
+    private Long pid;
     @Nonnull
     private String gepardVersion;
     @Nonnull
     private String otelVersion;
     @Nonnull
-    private Date lastJVMRestart;
+    private Instant startTime;
+    @Nonnull
+    private String javaVersion;
 
 }
