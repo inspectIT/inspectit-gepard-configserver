@@ -5,12 +5,11 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
-import rocks.inspectit.gepard.configserver.agent.Agent;
 import rocks.inspectit.gepard.configserver.connection.model.ConnectRequest;
 import rocks.inspectit.gepard.configserver.connection.model.ConnectRequestType;
 import rocks.inspectit.gepard.configserver.connection.model.ConnectResponse;
+import rocks.inspectit.gepard.configserver.connection.model.Connection;
 
-import java.util.Date;
 import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -31,13 +30,14 @@ public class ConnectionServiceTest {
         // GIVEN
         ConnectRequest connectRequest = ConnectRequest.builder()
                 .serviceName("service-name")
-                .pid("21434")
+                .pid(656345L)
                 .gepardVersion("0.0.1")
                 .otelVersion("1.26.8")
-                .startTime(new Date())
+                .startTime("2021-08-12T12:00:00Z")
+                .javaVersion("11.0.11")
                 .build();
 
-        when(connectionRepository.existsByPid(connectRequest.getPid())).thenReturn(false);
+        when(connectionRepository.existsByAgentPid(connectRequest.getPid())).thenReturn(false);
 
         // WHEN
         ConnectResponse response = connectionService.handleConnectRequest(connectRequest);
@@ -53,14 +53,15 @@ public class ConnectionServiceTest {
         // GIVEN
         ConnectRequest connectRequest = ConnectRequest.builder()
                 .serviceName("service-name")
-                .pid("21434")
+                .pid(56328758L)
                 .gepardVersion("0.0.1")
                 .otelVersion("1.26.8")
-                .startTime(new Date())
+                .startTime("2021-08-12T12:00:00Z")
+                .javaVersion("11.0.11")
                 .build();
 
-        when(connectionRepository.existsByPid(connectRequest.getPid())).thenReturn(true);
-        when(connectionRepository.findByPid(connectRequest.getPid())).thenReturn(Optional.of(new Agent()));
+        when(connectionRepository.existsByAgentPid(connectRequest.getPid())).thenReturn(true);
+        when(connectionRepository.findByAgentPid(connectRequest.getPid())).thenReturn(Optional.of(new Connection()));
 
         // WHEN
         ConnectResponse response = connectionService.handleConnectRequest(connectRequest);

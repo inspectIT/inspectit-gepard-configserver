@@ -6,7 +6,7 @@ import { useConnection } from "@/components/connections/useConnections";
 import { UseQueryResult } from "@tanstack/react-query";
 import { useSearchParams } from "next/navigation";
 
-export default function connectionDetailsPage() {
+export default function ConnectionDetailsPage() {
   const searchParams = useSearchParams();
 
   const connectionId: string | null = searchParams.get("connection");

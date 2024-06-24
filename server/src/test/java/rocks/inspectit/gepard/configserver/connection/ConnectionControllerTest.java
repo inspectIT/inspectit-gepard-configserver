@@ -29,7 +29,7 @@ public class ConnectionControllerTest {
                     "otelVersion": "1.26.8"
                 }"""; // JSON with some fields missing
 
-        mockMvc.perform(post("/api/v1/connection/connect")
+        mockMvc.perform(post("/api/v1/connections")
                         .contentType(MediaType.APPLICATION_JSON)
                 .content(requestJson))
                 .andExpect(status().isBadRequest());

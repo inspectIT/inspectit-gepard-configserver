@@ -1,5 +1,8 @@
+import { UUID } from "crypto";
+
 export interface Agent {
-  pid: string;
+  id: UUID;
+  pid: number;
   serviceName: string;
   otelVersion: string;
   gepardVersion: string;

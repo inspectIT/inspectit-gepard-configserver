@@ -5,8 +5,9 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { UUID } from "crypto";
 
-export default function ({ agentId }: { agentId: number }) {
+export default function AgentScopeForm({ agentId }: { agentId: UUID }) {
   return (
     <Card>
       <CardHeader>

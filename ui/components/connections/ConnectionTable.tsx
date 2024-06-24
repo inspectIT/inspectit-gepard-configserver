@@ -1,7 +1,6 @@
 "use client";
-import React, { useMemo } from "react";
 import { useConnections } from "./useConnections";
-import { ColumnDef, createColumnHelper } from "@tanstack/react-table";
+import { createColumnHelper } from "@tanstack/react-table";
 import DataTable from "../ui/DataTable";
 import { Connection } from "./Connection";
 import ConnectionTableActions from "./ConnectionTableActions";
@@ -54,7 +53,7 @@ const connectionColumns: any = [
   }),
 ];
 
-export default function connectionTable() {
+export default function ConnectionTable() {
   const connectionsQuery = useConnections();
 
   if (connectionsQuery.isSuccess) {
