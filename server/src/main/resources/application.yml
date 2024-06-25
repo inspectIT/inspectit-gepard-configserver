@@ -1,4 +1,21 @@
+server:
+  port: 8080
+  ssl:
+    bundle: "server"
+    enabled-protocols: "TLSv1.3"
+
 spring:
+  ssl:
+    bundle:
+      jks:
+        server:
+          key:
+            alias: "localhost"
+          keystore:
+            location: "classpath:ssl/localhost.p12"
+            password: "password"
+            type: "PKCS12"
+
   datasource:
     url: jdbc:postgresql://localhost:5432/gepard
     username: gepard
