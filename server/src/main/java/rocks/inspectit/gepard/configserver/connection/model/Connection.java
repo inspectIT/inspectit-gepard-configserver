@@ -1,11 +1,15 @@
+/* (C) 2024 */
 package rocks.inspectit.gepard.configserver.connection.model;
 
 import jakarta.persistence.*;
+import java.util.UUID;
 import lombok.*;
 import rocks.inspectit.gepard.configserver.agent.Agent;
 
-import java.util.UUID;
-
+/**
+ * Represents a connected agent. It is an internal data structure and not exposed to the API. Let´s
+ * use DTOs for the API.
+ */
 @Entity
 @Table
 @Data
@@ -14,10 +18,11 @@ import java.util.UUID;
 @NoArgsConstructor
 public class Connection {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private UUID id;
+  /** The id of the connection. This is a UUID and generate by JPA. */
+  @Id
+  @GeneratedValue(strategy = GenerationType.AUTO)
+  private UUID id;
 
-    @Embedded
-    private Agent agent;
+  /** The agent which is connected. */
+  @Embedded private Agent agent;
 }

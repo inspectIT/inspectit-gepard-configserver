@@ -1,90 +1,76 @@
+/* (C) 2024 */
 package rocks.inspectit.gepard.configserver.connection;
 
+import java.util.List;
+import java.util.UUID;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import rocks.inspectit.gepard.configserver.agent.Agent;
-import rocks.inspectit.gepard.configserver.connection.model.ConnectRequest;
-import rocks.inspectit.gepard.configserver.connection.model.ConnectRequestType;
-import rocks.inspectit.gepard.configserver.connection.model.ConnectResponse;
-import rocks.inspectit.gepard.configserver.connection.model.Connection;
-
-import java.time.Instant;
-import java.time.format.DateTimeParseException;
-import java.util.List;
-import java.util.UUID;
-
+import rocks.inspectit.gepard.configserver.connection.model.*;
+import rocks.inspectit.gepard.configserver.connection.model.dto.create.CreateConnectionRequest;
+import rocks.inspectit.gepard.configserver.connection.model.dto.create.CreateConnectionResponse;
+import rocks.inspectit.gepard.configserver.connection.model.dto.read.ReadConnectionDTO;
 
 @Service
 @RequiredArgsConstructor
 public class ConnectionServiceImpl implements ConnectionService {
 
-    @Autowired
-    private final ConnectionRepository connectionRepository;
+  private final ConnectionRepository connectionRepository;
 
-    public ConnectResponse handleConnectRequest(ConnectRequest agentConnectRequest) {
-        return createConnectResponse(agentConnectRequest);
+  @Autowired private final ConnectionDtoMapper connectionMapper;
+
+  public CreateConnectionResponse handleConnectRequest(CreateConnectionRequest connectRequest) {
+    return createConnectResponse(connectRequest);
+  }
+
+  @Override
+  public CreateConnectionResponse handleConnectRequestFromHeaders(
+      String agentName,
+      String gepardVersion,
+      String otelVersion,
+      Long pid,
+      Long startTime,
+      String javaVersion) {
+    CreateConnectionRequest connectRequest =
+        CreateConnectionRequest.builder()
+            .serviceName(agentName)
+            .gepardVersion(gepardVersion)
+            .otelVersion(otelVersion)
+            .pid(pid)
+            .startTime(startTime)
+            .javaVersion(javaVersion)
+            .build();
+
+    return createConnectResponse(connectRequest);
+  }
+
+  @Override
+  public List<ReadConnectionDTO> getConnections() {
+    List<Connection> connections = connectionRepository.findAll();
+    return ReadConnectionDTO.fromConnections(connections);
+  }
+
+  @Override
+  public ReadConnectionDTO getConnection(UUID id) {
+    Connection connection = connectionRepository.findById(id).orElseThrow();
+    return ReadConnectionDTO.fromConnection(connection);
+  }
+
+  private CreateConnectionResponse createConnectResponse(CreateConnectionRequest connectRequest) {
+
+    if (!connectionRepository.existsByAgentPid(connectRequest.pid())) {
+
+      Connection connection = connectionMapper.toConnection(connectRequest);
+
+      connectionRepository.save(connection);
+
+      return connectionMapper.toConnectionSuccessfulResponse(
+          connection, ConnectRequestType.CONNECT.toString());
+    } else {
+      Connection connection =
+          connectionRepository.findByAgentPid(connectRequest.pid()).orElseThrow();
+      return connectionMapper.toConnectionSuccessfulResponse(
+          connection, ConnectRequestType.RECONNECT.toString());
     }
-
-    @Override
-    public ConnectResponse handleConnectRequest(String agentName, String gepardVersion, String otelVersion, Long pid, String startTime, String javaVersion) {
-        ConnectRequest agentConnectRequest = ConnectRequest.builder()
-                .serviceName(agentName)
-                .gepardVersion(gepardVersion)
-                .otelVersion(otelVersion)
-                .pid(pid)
-                .startTime(startTime)
-                .javaVersion(javaVersion)
-                .build();
-
-        return createConnectResponse(agentConnectRequest);
-    }
-
-    @Override
-    public List<Connection> getConnections() {
-        return connectionRepository.findAll();
-    }
-
-    @Override
-    public Connection getConnection(UUID id) {
-        return connectionRepository.findById(id).orElseThrow();
-    }
-
-    private ConnectResponse createConnectResponse(ConnectRequest agentConnectRequest) {
-
-        Instant startTime = null;
-
-        if(!connectionRepository
-                .existsByAgentPid(agentConnectRequest.getPid())) {
-            try {
-                startTime = createInstantFromString(agentConnectRequest.getStartTime());
-
-            } catch(DateTimeParseException e) {
-                return ConnectResponse.builder().success(false).message("Start Date could not be parsed.").build();
-            }
-            Agent agent = Agent.builder()
-                    .serviceName(agentConnectRequest.getServiceName())
-                    .pid(agentConnectRequest.getPid())
-                    .gepardVersion(agentConnectRequest.getGepardVersion())
-                    .otelVersion(agentConnectRequest.getOtelVersion())
-                    .startTime(startTime)
-                    .javaVersion(agentConnectRequest.getJavaVersion())
-                    .build();
-
-            Connection connection = Connection.builder().agent(agent).build();
-
-            connectionRepository.save(connection);
-
-            return ConnectResponse.builder().success(true).agentRequestType(ConnectRequestType.CONNECT).connection(connection).build();
-        }
-        else {
-            Connection connection = connectionRepository.findByAgentPid(agentConnectRequest.getPid()).orElseThrow();
-            return ConnectResponse.builder().success(true).agentRequestType(ConnectRequestType.RECONNECT).connection(connection).build();
-        }
-    }
-
-    private Instant createInstantFromString(String dateString) throws DateTimeParseException {
-        return Instant.parse(dateString);
-    }
-
+  }
 }

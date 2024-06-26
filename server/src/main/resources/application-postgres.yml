@@ -17,7 +17,10 @@ spring:
             type: "PKCS12"
 
   datasource:
-    url: jdbc:h2:mem:testdb
+    url: jdbc:postgresql://localhost:5432/gepard
+    username: gepard
+    password: password
+    driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
       ddl-auto: create-drop

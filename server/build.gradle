@@ -3,6 +3,7 @@ plugins {
 	id 'org.springframework.boot' version '3.3.0'
 	id 'io.spring.dependency-management' version '1.1.5'
 	id("com.diffplug.spotless") version "6.25.0"
+	id 'jacoco'
 }
 
 group = 'rocks.inspectit.gepard'
@@ -32,11 +33,11 @@ dependencies {
 	// implementation "org.springframework.boot:spring-boot-starter-security"
 	compileOnly 'org.projectlombok:lombok'
 	runtimeOnly 'org.postgresql:postgresql'
+	runtimeOnly 'com.h2database:h2'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.springframework.amqp:spring-rabbit-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
-	testRuntimeOnly 'com.h2database:h2'
 
 	// Third-Party
 
@@ -54,6 +55,27 @@ dependencies {
 }
 
 tasks.named('test') {
+	finalizedBy jacocoTestReport
 	useJUnitPlatform()
+}
+
+jacocoTestReport {
+	dependsOn test
+}
+
+spotless {
+	java {
+		importOrder()
+		removeUnusedImports()
+
+		// Cleanthat will refactor code. Has to be configured.
+		// cleanthat()
+
+		googleJavaFormat()   // has its own section below
+
+		formatAnnotations()  // fixes formatting of type annotations, see below
+
+		licenseHeader '/* (C) 2024 */' // or licenseHeaderFile
+	}
 }
 
