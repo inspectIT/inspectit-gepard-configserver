@@ -10,9 +10,9 @@ spring:
       jks:
         server:
           key:
-            alias: "localhost"
+            alias: "igc-dev"
           keystore:
-            location: "classpath:ssl/localhost.p12"
+            location: "classpath:ssl/igc-dev.p12"
             password: "password"
             type: "PKCS12"
 
