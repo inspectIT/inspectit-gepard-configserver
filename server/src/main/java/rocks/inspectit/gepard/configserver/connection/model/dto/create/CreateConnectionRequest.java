@@ -6,9 +6,9 @@ import lombok.Builder;
 
 @Builder
 public record CreateConnectionRequest(
-    @NotNull String serviceName,
-    @NotNull String gepardVersion,
-    @NotNull String otelVersion,
-    @NotNull Long pid,
-    @NotNull Long startTime,
-    @NotNull String javaVersion) {}
+    @NotNull(message = "Service Name missing.") String serviceName,
+    @NotNull(message = "Gepard Version missing.") String gepardVersion,
+    @NotNull(message = "Open-Telemetry Version missing.") String otelVersion,
+    @NotNull(message = "Process ID is missing.") Long pid,
+    @NotNull(message = "Start-Time missing.") Long startTime,
+    @NotNull(message = "Java Version missing.") String javaVersion) {}
