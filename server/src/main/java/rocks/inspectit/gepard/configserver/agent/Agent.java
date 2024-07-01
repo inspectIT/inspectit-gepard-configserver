@@ -4,23 +4,31 @@ package rocks.inspectit.gepard.configserver.agent;
 import jakarta.annotation.Nonnull;
 import jakarta.persistence.*;
 import java.time.Instant;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
-@Data
-@Builder
+/** Represents an agent which is connected to the config server. */
 @Embeddable
-@AllArgsConstructor
+@RequiredArgsConstructor
 @NoArgsConstructor
+@Builder
+@ToString
+@Getter
 public class Agent {
-
-  // The Service name, which is provided by the agent
+  /** The name of the service which is running the agent. */
   @Nonnull private String serviceName;
+
+  /** The process id of the JVM which carries the agent. */
   @Nonnull private Long pid;
+
+  /** The Gepard-Version. */
   @Nonnull private String gepardVersion;
+
+  /** The OpenTelemetry-Java-Instrumentation-Version. */
   @Nonnull private String otelVersion;
+
+  /** The start time of the JVM which carries the agent. */
   @Nonnull private Instant startTime;
+
+  /** The Java version of the JVM which carries the agent. */
   @Nonnull private String javaVersion;
 }

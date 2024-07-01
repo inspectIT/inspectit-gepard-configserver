@@ -12,10 +12,11 @@ import rocks.inspectit.gepard.configserver.agent.Agent;
  */
 @Entity
 @Table
-@Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
+@Getter
+@ToString
 public class Connection {
 
   /** The id of the connection. This is a UUID and generate by JPA. */
