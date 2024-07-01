@@ -45,6 +45,7 @@ public class ConnectionDtoMapperTest {
     assertEquals("javaVersion", connection.getAgent().getJavaVersion());
   }
 
+  @Test
   public void testToConnectionSuccessfulResponse() {
 
     Connection connection =
