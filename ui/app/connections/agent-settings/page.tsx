@@ -20,7 +20,7 @@ export default function ConnectionDetailsPage() {
     return <h1>Here would be a Spinner!</h1>;
   }
   if (connectionQuery?.isSuccess) {
-    const agent = connectionQuery.data.agent;
-    return <AgentSettingsView agent={agent} />;
+    const connection = connectionQuery.data;
+    return <AgentSettingsView connection={connection} />;
   }
 }

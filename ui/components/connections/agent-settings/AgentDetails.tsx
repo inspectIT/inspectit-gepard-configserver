@@ -1,4 +1,3 @@
-import { Agent } from "../Agent";
 import {
   Card,
   CardContent,
@@ -7,28 +6,35 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { Connection } from "../Connection";
 export interface AgentDetailsProps {
-  agent: Agent;
+  connection: Connection;
 }
-export default function AgentDetails({ agent }: AgentDetailsProps) {
+export default function AgentDetails({ connection }: AgentDetailsProps) {
   return (
     <Card className="p-2">
       <CardHeader>
-        <CardTitle>{agent.serviceName}</CardTitle>
-        <CardDescription>Running on {agent.pid}</CardDescription>
+        <CardTitle>{connection.serviceName}</CardTitle>
+        <CardDescription>Running on {connection.pid}</CardDescription>
       </CardHeader>
       <CardContent>
         <div className="space-y-1">
           <h4 className="text-sm leading-none">InspectIT Gepard Version</h4>
-          <p className="text-sm text-muted-foreground">{agent.gepardVersion}</p>
+          <p className="text-sm text-muted-foreground">
+            {connection.gepardVersion}
+          </p>
         </div>
         <div className="space-y-1">
           <h4 className="text-sm leading-none">OpenTelemetry Version</h4>
-          <p className="text-sm text-muted-foreground">{agent.otelVersion}</p>
+          <p className="text-sm text-muted-foreground">
+            {connection.otelVersion}
+          </p>
         </div>
         <div className="space-y-1">
           <h4 className="text-sm leading-none">Java Version</h4>
-          <p className="text-sm text-muted-foreground">{agent.javaVersion}</p>
+          <p className="text-sm text-muted-foreground">
+            {connection.javaVersion}
+          </p>
         </div>
       </CardContent>
     </Card>

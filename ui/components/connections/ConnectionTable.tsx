@@ -8,31 +8,31 @@ import ConnectionTableActions from "./ConnectionTableActions";
 const columnHelper = createColumnHelper<Connection>();
 
 const connectionColumns: any = [
-  columnHelper.accessor((connection) => connection.agent.serviceName, {
+  columnHelper.accessor((connection) => connection.serviceName, {
     id: "serviceName",
     cell: (info) => <i>{info.getValue()}</i>,
     header: () => <span>Service Name</span>,
     footer: (props) => props.column.id,
   }),
-  columnHelper.accessor((connection) => connection.agent.pid, {
+  columnHelper.accessor((connection) => connection.pid, {
     id: "pid",
     cell: (info) => <i>{info.getValue()}</i>,
     header: () => <span>Process ID</span>,
     footer: (props) => props.column.id,
   }),
-  columnHelper.accessor((connection) => connection.agent.otelVersion, {
+  columnHelper.accessor((connection) => connection.otelVersion, {
     id: "otelVersion",
     cell: (info) => <i>{info.getValue()}</i>,
     header: () => <span>Otel Version</span>,
     footer: (props) => props.column.id,
   }),
-  columnHelper.accessor((connection) => connection.agent.gepardVersion, {
+  columnHelper.accessor((connection) => connection.gepardVersion, {
     id: "gepardVersion",
     cell: (info) => <i>{info.getValue()}</i>,
     header: () => <span>Gepard Version</span>,
     footer: (props) => props.column.id,
   }),
-  columnHelper.accessor((connection) => connection.agent.startTime, {
+  columnHelper.accessor((connection) => connection.startTime, {
     id: "startTime",
     cell: (info) => {
       const dateString = info.getValue();

@@ -3,5 +3,10 @@ import { Agent } from "./Agent";
 
 export interface Connection {
   id: UUID;
-  agent: Agent;
+  pid: number;
+  serviceName: string;
+  otelVersion: string;
+  gepardVersion: string;
+  startTime: string;
+  javaVersion: string;
 }
