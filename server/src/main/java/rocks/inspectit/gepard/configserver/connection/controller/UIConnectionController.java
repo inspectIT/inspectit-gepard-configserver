@@ -10,6 +10,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import rocks.inspectit.gepard.configserver.connection.service.UIConnectionService;
 
+/**
+ * Controller for handling UI connection requests.
+ * Holds the GET endpoints for handling connection requests from the UI.
+ */
 @RestController
 @RequestMapping("/api/v1/connections")
 @RequiredArgsConstructor

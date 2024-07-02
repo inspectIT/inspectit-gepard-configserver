@@ -7,8 +7,8 @@ import lombok.*;
 import rocks.inspectit.gepard.configserver.agent.Agent;
 
 /**
- * Represents a connected agent. It is an internal data structure and not exposed to the API. Let´s
- * use DTOs for the API.
+ * Represents a connected agent. It is an internal data structure and not exposed to the API.
+ * Acts as Aggregate Root.
  */
 @Entity
 @Table
