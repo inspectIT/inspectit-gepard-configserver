@@ -7,6 +7,7 @@ import rocks.inspectit.gepard.configserver.connection.model.Connection;
 
 /**
  * Represents a connection response for the UI, when reading connections.
+ *
  * @param id
  * @param serviceName
  * @param gepardVersion

@@ -9,8 +9,8 @@ import rocks.inspectit.gepard.configserver.connection.model.dto.create.CreateCon
 import rocks.inspectit.gepard.configserver.connection.service.AgentConnectionService;
 
 /**
- * Controller for handling agent connection requests.
- * Holds the POST endpoint for handling connection requests from agents.
+ * Controller for handling agent connection requests. Holds the POST endpoint for handling
+ * connection requests from agents.
  */
 @RestController
 @RequestMapping("/api/v1/connections")

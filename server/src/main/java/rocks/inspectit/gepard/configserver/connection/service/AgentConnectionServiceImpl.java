@@ -9,9 +9,7 @@ import rocks.inspectit.gepard.configserver.connection.model.*;
 import rocks.inspectit.gepard.configserver.connection.model.dto.create.CreateConnectionRequest;
 import rocks.inspectit.gepard.configserver.connection.model.dto.create.CreateConnectionResponse;
 
-/**
- * Service-Implementation for handling agent connection requests.
- */
+/** Service-Implementation for handling agent connection requests. */
 @Service
 @RequiredArgsConstructor
 @Slf4j
@@ -23,6 +21,7 @@ public class AgentConnectionServiceImpl implements AgentConnectionService {
 
   /**
    * Handles a connection request from an agent.
+   *
    * @param connectRequest
    * @return
    */
@@ -33,6 +32,7 @@ public class AgentConnectionServiceImpl implements AgentConnectionService {
 
   /**
    * Creates a connection response based on the given connection request.
+   *
    * @param connectRequest The connection request.
    * @return CreateConnectionResponse The connection response.
    */

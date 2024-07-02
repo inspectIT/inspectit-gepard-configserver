@@ -6,6 +6,7 @@ import java.util.List;
 
 /**
  * Represents an error that occurred during an API request.
+ *
  * @param path
  * @param errors
  * @param statusCode

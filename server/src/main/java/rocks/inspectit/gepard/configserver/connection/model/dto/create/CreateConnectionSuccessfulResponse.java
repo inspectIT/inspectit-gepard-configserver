@@ -5,6 +5,7 @@ import java.util.UUID;
 
 /**
  * Represents a successful connection response.
+ *
  * @param id
  * @param serviceName
  * @param gepardVersion

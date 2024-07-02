@@ -8,15 +8,13 @@ import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
-/**
- * Web configuration for the application.
- */
+/** Web configuration for the application. */
 @Configuration
 public class WebConfiguration implements WebMvcConfigurer {
 
   /**
-   * Adds CORS mappings to the registry.
-   * Allow all origins and methods.
+   * Adds CORS mappings to the registry. Allow all origins and methods.
+   *
    * @param registry
    */
   @Override
@@ -25,8 +23,8 @@ public class WebConfiguration implements WebMvcConfigurer {
   }
 
   /**
-   * Adds resource handlers to the registry.
-   * All requests to /ui/** will serve the static folder.
+   * Adds resource handlers to the registry. All requests to /ui/** will serve the static folder.
+   *
    * @param registry the resource handler registry
    */
   @Override
@@ -35,11 +33,12 @@ public class WebConfiguration implements WebMvcConfigurer {
   }
 
   /**
-    * Adds view controllers to the registry.
-    * Redirects all requests to /ui, /, /ui/connections, /ui/connections/agent-settings to their respective index.html files.
-    * If new endpoints are added, they should be added here.
-    * @param registry the view controller registry
-    */
+   * Adds view controllers to the registry. Redirects all requests to /ui, /, /ui/connections,
+   * /ui/connections/agent-settings to their respective index.html files. If new endpoints are
+   * added, they should be added here.
+   *
+   * @param registry the view controller registry
+   */
   @Override
   public void addViewControllers(ViewControllerRegistry registry) {
     registry
