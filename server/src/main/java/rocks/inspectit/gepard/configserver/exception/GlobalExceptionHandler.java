@@ -4,6 +4,7 @@ package rocks.inspectit.gepard.configserver.exception;
 import jakarta.servlet.http.HttpServletRequest;
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.stream.Collectors;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -12,6 +13,7 @@ import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.method.annotation.MethodArgumentTypeMismatchException;
 
 /** Global exception handler for the application. */
 @ControllerAdvice
@@ -44,8 +46,8 @@ public class GlobalExceptionHandler {
    * @param ex the exception
    * @return the response entity
    */
-  @ExceptionHandler(HttpMessageNotReadableException.class)
-  public ResponseEntity<ApiError> handleMessageNotReadableErrors(
+  @ExceptionHandler({HttpMessageNotReadableException.class})
+  public ResponseEntity<ApiError> handleBadRequestError(
       HttpMessageNotReadableException ex, HttpServletRequest request) {
     ApiError apiError =
         new ApiError(
@@ -54,5 +56,34 @@ public class GlobalExceptionHandler {
             HttpStatus.BAD_REQUEST.value(),
             LocalDateTime.now());
     return new ResponseEntity<>(apiError, HttpStatus.BAD_REQUEST);
+  }
+
+  /**
+   * Handles MethodArgumentTypeMismatchException (e.g. if a path variable is not of the correct
+   * type).
+   */
+  @ExceptionHandler(MethodArgumentTypeMismatchException.class)
+  public ResponseEntity<ApiError> handleMethodArgumentTypeMismatch(
+      MethodArgumentTypeMismatchException ex, HttpServletRequest request) {
+    ApiError apiError =
+        new ApiError(
+            request.getRequestURI(),
+            List.of(ex.getMessage()),
+            HttpStatus.BAD_REQUEST.value(),
+            LocalDateTime.now());
+    return new ResponseEntity<>(apiError, HttpStatus.BAD_REQUEST);
+  }
+
+  /** Handles NoSuchElementException (e.g. if an entity is not found). */
+  @ExceptionHandler(NoSuchElementException.class)
+  public ResponseEntity<ApiError> handleNotFoundError(
+      NoSuchElementException ex, HttpServletRequest request) {
+    ApiError apiError =
+        new ApiError(
+            request.getRequestURI(),
+            List.of(ex.getMessage()),
+            HttpStatus.NOT_FOUND.value(),
+            LocalDateTime.now());
+    return new ResponseEntity<>(apiError, HttpStatus.NOT_FOUND);
   }
 }

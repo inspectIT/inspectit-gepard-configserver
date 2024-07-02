@@ -37,5 +37,5 @@ Content-Type: application/json
 > {% client.global.set("agent_id", response.body.id); %}
 
 ### GET request to connections/{id}
-GET https://localhost:8080/api/v1/connections/{{agent_id}}
+GET https://localhost:8080/api/v1/connections/c66482dd-cb7b-45e0-a467-70db08776df6
 
