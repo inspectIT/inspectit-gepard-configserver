@@ -1,22 +1,38 @@
-# Stage 1: Node.js build
-FROM node:20 AS build
+# ---- Build Stage ----
+FROM gradle:jdk21 as build
 
-# Set working directory
-WORKDIR /app
+WORKDIR /home/gradle/project
 
-# Copy package.json and package-lock.json
-COPY ./client/package*.json ./
+# Copy the Gradle wrapper files
+COPY gradle /home/gradle/project/gradle
+COPY gradlew /home/gradle/project/
+COPY build.gradle /home/gradle/project/
+COPY settings.gradle /home/gradle/project/
 
-# Install dependencies
-RUN npm install
+# Copy server source code
+COPY server /home/gradle/project/server
+# Copy ui source code
+COPY ui /home/gradle/project/ui
 
-# Copy the rest of the application code
-COPY . .
+# Build the application
+RUN ./gradlew build -x test
 
-# Run the build script for the client
-RUN npm run build
+# ---- Runtime Stage ----
+# We use Temurin as it is the default at VHV
+FROM eclipse-temurin:21-jre-jammy
 
-# Run the
+# In order to use a postgres database, we need to set the active profile
+# ENV SPRING_PROFILES_ACTIVE=postgres
+
+# Copy the build from the server subproject to the runtime image
+# The jar already contains the static export from the ui subproject
+COPY --from=build /home/gradle/project/server/build/libs/*.jar app.jar
+
+# Expose the port on which the app will run
+EXPOSE 8080
+
+# Run the application
+ENTRYPOINT ["java", "-jar", "/app.jar"]
 
 
 
