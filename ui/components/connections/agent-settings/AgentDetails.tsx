@@ -5,7 +5,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
+} from "@/components/shadcn/card";
 import { Connection } from "../Connection";
 export interface AgentDetailsProps {
   connection: Connection;

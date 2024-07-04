@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
+import { Sheet, SheetContent, SheetTrigger } from "../shadcn/sheet";
 import { MenuIcon } from "lucide-react";
 import SideNav from "./Sidenav";
 import { NAV_ITEMS } from "./NavItems";

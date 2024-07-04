@@ -4,7 +4,7 @@ import { useSidebarStore } from "./useSidebarStore";
 import { useState } from "react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
-import { buttonVariants } from "../ui/button";
+import { buttonVariants } from "../shadcn/button";
 
 interface SideNavProps {
   items: NavItem[];

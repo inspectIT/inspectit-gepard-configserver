@@ -7,7 +7,7 @@ export const NAV_ITEMS = [
     href:
       process.env.NODE_ENV == "production"
         ? "/ui/connections/"
-        : "/connections",
+        : "/connections/",
     icon: MdOutlineSupportAgent,
     color: "text-sky-500",
   },
