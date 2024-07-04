@@ -15,8 +15,6 @@ interface SideNavProps {
 export default function SideNav({ items, className, setOpen }: SideNavProps) {
   const path = usePathname();
   const { isOpen } = useSidebarStore();
-  const [openItem, setOpenItem] = useState("");
-  const [lastOpenItem, setLastOpenItem] = useState("");
 
   return (
     <nav className="space-y-2">
