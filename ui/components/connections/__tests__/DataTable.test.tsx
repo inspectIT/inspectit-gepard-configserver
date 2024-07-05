@@ -28,7 +28,7 @@ const setup = (data: Connection[]) => {
   );
 };
 
-describe("ConnectionsPage No Data", () => {
+describe("Data Table No Data", () => {
   let containerWithoutData: HTMLElement;
 
   // Arrange
@@ -53,7 +53,7 @@ describe("ConnectionsPage No Data", () => {
   });
 });
 
-describe("ConnectionsPage with Data", () => {
+describe("Data Table with Data", () => {
   let containerWithData: HTMLElement;
   beforeEach(() => {
     cleanup();

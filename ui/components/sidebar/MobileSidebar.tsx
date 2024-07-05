@@ -6,15 +6,6 @@ import { NAV_ITEMS } from "./NavItems";
 
 export default function MobileSidebar() {
   const [open, setOpen] = useState(false);
-  const [isMounted, setIsMounted] = useState(false);
-
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
-
-  if (!isMounted) {
-    return null;
-  }
 
   return (
     <>
