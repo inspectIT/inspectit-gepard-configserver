@@ -8,11 +8,9 @@ import {
   screen,
   waitFor,
 } from "@testing-library/react";
-import Providers from "@/app/providers";
 import { TestConnectionsBig, TestConnectionsSmall } from "./TestConnections";
 import { useConnections } from "../useConnections";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { before } from "node:test";
 import { Connection } from "../Connection";
 const nock = require("nock");
 
@@ -31,9 +29,11 @@ describe("Connection Table", () => {
       },
     });
 
-    return ({ children }) => (
+    const QueryClientProvider = ({ children }) => (
       <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
     );
+
+    return QueryClientProvider;
   };
 
   const mockApiCallResponse = (connectionsToReturn: Connection[]) => {
