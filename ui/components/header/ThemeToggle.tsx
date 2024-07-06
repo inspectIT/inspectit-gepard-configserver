@@ -1,6 +1,6 @@
 "use client";
 import { useTheme } from "next-themes";
-import { Button } from "../ui/button";
+import { Button } from "../shadcn/button";
 import { Moon, Sun } from "lucide-react";
 
 export function ThemeToggle() {

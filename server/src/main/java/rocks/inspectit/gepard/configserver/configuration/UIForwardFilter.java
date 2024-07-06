@@ -22,6 +22,12 @@ import org.springframework.web.servlet.view.RedirectView;
 @RequestMapping("/")
 public class UIForwardFilter implements Filter {
 
+  /**
+   * Redirects the root path to the /ui/ endpoint.
+   *
+   * @param model the model
+   * @return the model and view
+   */
   @GetMapping
   public ModelAndView redirectRoot(Model model) {
     RedirectView redirectView = new RedirectView("/ui/");
@@ -29,6 +35,15 @@ public class UIForwardFilter implements Filter {
     return new ModelAndView(redirectView);
   }
 
+  /**
+   * Forwards the request to the 'index.html' file if the request URI is a folder.
+   *
+   * @param request the ServletRequest
+   * @param response the ServletResponse
+   * @param chain the FilterChain
+   * @throws IOException the io exception
+   * @throws ServletException the servlet exception
+   */
   @Override
   public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
       throws IOException, ServletException {

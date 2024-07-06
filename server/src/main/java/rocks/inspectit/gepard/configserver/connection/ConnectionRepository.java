@@ -7,6 +7,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 import rocks.inspectit.gepard.configserver.connection.model.Connection;
 
+/** Repository for the connection entity. */
 @Repository
 public interface ConnectionRepository extends JpaRepository<Connection, UUID> {
 

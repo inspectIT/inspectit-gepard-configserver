@@ -4,7 +4,7 @@ import { useSidebarStore } from "./useSidebarStore";
 import { useState } from "react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
-import { buttonVariants } from "../ui/button";
+import { buttonVariants } from "../shadcn/button";
 
 interface SideNavProps {
   items: NavItem[];
@@ -15,8 +15,6 @@ interface SideNavProps {
 export default function SideNav({ items, className, setOpen }: SideNavProps) {
   const path = usePathname();
   const { isOpen } = useSidebarStore();
-  const [openItem, setOpenItem] = useState("");
-  const [lastOpenItem, setLastOpenItem] = useState("");
 
   return (
     <nav className="space-y-2">

@@ -1,13 +1,11 @@
 /* (C) 2024 */
-package rocks.inspectit.gepard.configserver.connection;
+package rocks.inspectit.gepard.configserver.connection.service;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.when;
 
-import java.time.Instant;
-import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 import org.junit.jupiter.api.Test;
@@ -15,21 +13,20 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
-import rocks.inspectit.gepard.configserver.agent.Agent;
+import rocks.inspectit.gepard.configserver.connection.ConnectionRepository;
 import rocks.inspectit.gepard.configserver.connection.model.*;
 import rocks.inspectit.gepard.configserver.connection.model.dto.create.CreateConnectionRequest;
 import rocks.inspectit.gepard.configserver.connection.model.dto.create.CreateConnectionResponse;
 import rocks.inspectit.gepard.configserver.connection.model.dto.create.CreateConnectionSuccessfulResponse;
-import rocks.inspectit.gepard.configserver.connection.model.dto.read.ReadConnectionDTO;
 
 @ExtendWith(MockitoExtension.class)
-public class ConnectionServiceImplTest {
+public class AgentConnectionServiceImplTest {
 
   @Mock private ConnectionRepository connectionRepository;
 
   @Mock private ConnectionDtoMapper connectionMapper;
 
-  @InjectMocks private ConnectionServiceImpl connectionService;
+  @InjectMocks private AgentConnectionServiceImpl connectionService;
 
   private CreateConnectionRequest connectRequest;
   private CreateConnectionSuccessfulResponse connectionResponse;
@@ -108,92 +105,5 @@ public class ConnectionServiceImplTest {
     CreateConnectionResponse result = connectionService.handleConnectRequest(connectRequest);
 
     assertEquals(connectionResponse, result);
-  }
-
-  @Test
-  public void testHandleConnectRequestFromHeaders() {
-    String agentName = "agentName";
-    String gepardVersion = "gepardVersion";
-    String otelVersion = "otelVersion";
-    Long pid = 123L;
-    Long startTime = 1719394483600L;
-    String javaVersion = "javaVersion";
-
-    when(connectionRepository.existsByAgentPid(123L)).thenReturn(true);
-    when(connectionRepository.findByAgentPid(123L)).thenReturn(Optional.of(new Connection()));
-    when(connectionMapper.toConnectionSuccessfulResponse(
-            any(Connection.class), eq(ConnectRequestType.RECONNECT.toString())))
-        .thenReturn(connectionResponse);
-
-    CreateConnectionResponse result =
-        connectionService.handleConnectRequestFromHeaders(
-            agentName, gepardVersion, otelVersion, pid, startTime, javaVersion);
-
-    assertEquals(connectionResponse, result);
-  }
-
-  @Test
-  public void testGetConnection() {
-
-    Connection connection =
-        Connection.builder()
-            .id(new UUID(0, 0))
-            .agent(
-                Agent.builder()
-                    .serviceName("serviceName")
-                    .gepardVersion("gepardVersion")
-                    .otelVersion("otelVersion")
-                    .pid(123L)
-                    .startTime(Instant.ofEpochMilli(1719394483600L))
-                    .javaVersion("javaVersion")
-                    .build())
-            .build();
-    ReadConnectionDTO readConnectionDTO =
-        new ReadConnectionDTO(
-            new UUID(0, 0),
-            "serviceName",
-            "gepardVersion",
-            "otelVersion",
-            123L,
-            1719394483600L,
-            "javaVersion");
-
-    when(connectionRepository.findById(any(UUID.class))).thenReturn(Optional.of(connection));
-
-    ReadConnectionDTO result = connectionService.getConnection(new UUID(0, 0));
-
-    assertEquals(readConnectionDTO, result);
-  }
-
-  @Test
-  public void testGetConnections() {
-    Connection connection =
-        Connection.builder()
-            .id(new UUID(0, 0))
-            .agent(
-                Agent.builder()
-                    .serviceName("serviceName")
-                    .gepardVersion("gepardVersion")
-                    .otelVersion("otelVersion")
-                    .pid(123L)
-                    .startTime(Instant.ofEpochMilli(1719394483600L))
-                    .javaVersion("javaVersion")
-                    .build())
-            .build();
-    List<ReadConnectionDTO> readConnectionDTO =
-        List.of(
-            new ReadConnectionDTO(
-                new UUID(0, 0),
-                "serviceName",
-                "gepardVersion",
-                "otelVersion",
-                123L,
-                1719394483600L,
-                "javaVersion"));
-
-    when(connectionRepository.findAll()).thenReturn(List.of(connection));
-    List<ReadConnectionDTO> result = connectionService.getConnections();
-
-    assertEquals(readConnectionDTO, result);
   }
 }

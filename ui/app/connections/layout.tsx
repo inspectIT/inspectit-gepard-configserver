@@ -3,5 +3,5 @@ export default function connectionsLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <section>{children}</section>;
+  return <section className="h-full">{children}</section>;
 }

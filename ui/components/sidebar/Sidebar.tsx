@@ -21,14 +21,16 @@ export default function Sidebar({ className }: SidebarProps) {
 
   return (
     <nav
+      role="sidebar"
       className={cn(
         `relative hidden h-screen border-r pt-20 md:block`,
         status && "duration-500",
-        isOpen ? "w-72" : "w-[78px]",
+        isOpen ? "w-52" : "w-[78px]",
         className
       )}
     >
       <BsArrowLeftShort
+        role="sidebar-toggle"
         className={cn(
           "absolute -right-3 top-20 cursor-pointer rounded-full border bg-background text-3xl text-foreground",
           !isOpen && "rotate-180"

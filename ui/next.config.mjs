@@ -6,9 +6,7 @@ const nextConfig = {
     output: 'export',
     distDir: 'build',
     trailingSlash: true,
-    assetPrefix: isProduction ? '/ui' : '/',
-
-
+    assetPrefix: isProduction ? '/ui' : undefined,
 };
 
 export default nextConfig;

@@ -78,3 +78,9 @@ fabric.properties
 
 # Gradle Files
 .gradle
+# build-Folder in root-dir
+/build
+# ui artifact build
+/ui/build_packageClient/
+
+**/.DS_Store

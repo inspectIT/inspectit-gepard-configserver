@@ -37,6 +37,12 @@ public class ConnectionDtoMapper {
         true);
   }
 
+  /**
+   * Maps a CreateConnectionRequest object to a Connection object.
+   *
+   * @param request The CreateConnectionRequest object to be mapped.
+   * @return A Connection object containing the mapped data from the CreateConnectionRequest object.
+   */
   public Connection toConnection(CreateConnectionRequest request) {
     return Connection.builder()
         .agent(

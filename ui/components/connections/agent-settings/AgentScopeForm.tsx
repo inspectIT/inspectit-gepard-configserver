@@ -4,10 +4,14 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
+} from "@/components/shadcn/card";
 import { UUID } from "crypto";
 
-export default function AgentScopeForm({ agentId }: { agentId: UUID }) {
+export default function AgentScopeForm({
+  connectionId,
+}: {
+  connectionId: UUID;
+}) {
   return (
     <Card>
       <CardHeader>

@@ -1,6 +1,6 @@
 import { UUID } from "crypto";
 import Link from "next/link";
-import { buttonVariants } from "../ui/button";
+import { buttonVariants } from "../shadcn/button";
 
 interface connectionTableActionsProps {
   id: UUID;
