@@ -1,6 +1,4 @@
 import { fetchData } from "@/lib/httpClient";
-import { UUID } from "crypto";
-import { Agent } from "./Agent";
 
 export const getconnections = async () => {
   const data = await fetchData("/connections");

@@ -1,14 +1,6 @@
 "use client";
 import { useConnections } from "./useConnections";
-import {
-  AccessorFnColumnDef,
-  ColumnDef,
-  createColumnHelper,
-} from "@tanstack/react-table";
-import { ScrollArea } from "@/components/shadcn/scroll-area";
 import DataTable from "../shadcn/DataTable";
-import { Connection } from "./Connection";
-import ConnectionTableActions from "./ConnectionTableActions";
 import {
   Card,
   CardContent,
@@ -16,8 +8,7 @@ import {
   CardHeader,
   CardTitle,
 } from "../shadcn/card";
-import SortableTableColumn from "../ui/SortableTableColumn";
-import { InputHTMLAttributes, useEffect, useState } from "react";
+import { useState } from "react";
 import { connectionColumns } from "./ConnectionColumns";
 import DebouncedInput from "../ui/DebouncedInput";
 

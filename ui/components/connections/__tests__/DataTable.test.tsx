@@ -6,7 +6,6 @@ import Providers from "@/app/providers";
 import ConnectionTable from "../ConnectionTable";
 import DataTable from "@/components/shadcn/DataTable";
 import { SetStateAction } from "react";
-import { afterEach } from "node:test";
 import { randomUUID } from "node:crypto";
 import { connectionColumns } from "../ConnectionColumns";
 import { NIL as NIL_UUID } from "uuid";
@@ -28,7 +27,7 @@ const setup = (data: Connection[]) => {
   );
 };
 
-describe("ConnectionsPage No Data", () => {
+describe("Data Table No Data", () => {
   let containerWithoutData: HTMLElement;
 
   // Arrange
@@ -38,25 +37,18 @@ describe("ConnectionsPage No Data", () => {
     containerWithoutData = renderedDom.container;
   });
 
-  afterEach(() => {
-    cleanup();
-  });
-
   it("renders successfully", async () => {
     expect(containerWithoutData).toMatchSnapshot();
-    cleanup();
   });
 
   it('renders "no results" without data', async () => {
     const text = await screen.findByText("No results.");
-    cleanup();
   });
 });
 
-describe("ConnectionsPage with Data", () => {
+describe("Data Table with Data", () => {
   let containerWithData: HTMLElement;
   beforeEach(() => {
-    cleanup();
     const renderedDom = setup(TestConnections);
     containerWithData = renderedDom.container;
   });

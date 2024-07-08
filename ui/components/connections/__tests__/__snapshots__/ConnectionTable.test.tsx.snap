@@ -1,0 +1,1703 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Connection Table > ConnectionsTable renders other elements at click on "next". 1`] = `
+[
+  <table
+    class="w-full caption-bottom text-sm border"
+  >
+    <thead
+      class="[&_tr]:border-b sticky top-0 bg-secondary"
+    >
+      <tr
+        class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted"
+      >
+        <th
+          class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&:has([role=checkbox])]:pr-0"
+        >
+          <button
+            class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2"
+          >
+            Service Name
+            <svg
+              class="lucide lucide-arrow-up-down ml-2 h-4 w-4"
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="m21 16-4 4-4-4"
+              />
+              <path
+                d="M17 20V4"
+              />
+              <path
+                d="m3 8 4-4 4 4"
+              />
+              <path
+                d="M7 4v16"
+              />
+            </svg>
+          </button>
+        </th>
+        <th
+          class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&:has([role=checkbox])]:pr-0"
+        >
+          <button
+            class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2"
+          >
+            Process ID
+            <svg
+              class="lucide lucide-arrow-up-down ml-2 h-4 w-4"
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="m21 16-4 4-4-4"
+              />
+              <path
+                d="M17 20V4"
+              />
+              <path
+                d="m3 8 4-4 4 4"
+              />
+              <path
+                d="M7 4v16"
+              />
+            </svg>
+          </button>
+        </th>
+        <th
+          class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&:has([role=checkbox])]:pr-0"
+        >
+          <button
+            class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2"
+          >
+            Java Version
+            <svg
+              class="lucide lucide-arrow-up-down ml-2 h-4 w-4"
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="m21 16-4 4-4-4"
+              />
+              <path
+                d="M17 20V4"
+              />
+              <path
+                d="m3 8 4-4 4 4"
+              />
+              <path
+                d="M7 4v16"
+              />
+            </svg>
+          </button>
+        </th>
+        <th
+          class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&:has([role=checkbox])]:pr-0"
+        >
+          <button
+            class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2"
+          >
+            Otel Version
+            <svg
+              class="lucide lucide-arrow-up-down ml-2 h-4 w-4"
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="m21 16-4 4-4-4"
+              />
+              <path
+                d="M17 20V4"
+              />
+              <path
+                d="m3 8 4-4 4 4"
+              />
+              <path
+                d="M7 4v16"
+              />
+            </svg>
+          </button>
+        </th>
+        <th
+          class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&:has([role=checkbox])]:pr-0"
+        >
+          <button
+            class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2"
+          >
+            Gepard Version
+            <svg
+              class="lucide lucide-arrow-up-down ml-2 h-4 w-4"
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="m21 16-4 4-4-4"
+              />
+              <path
+                d="M17 20V4"
+              />
+              <path
+                d="m3 8 4-4 4 4"
+              />
+              <path
+                d="M7 4v16"
+              />
+            </svg>
+          </button>
+        </th>
+        <th
+          class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&:has([role=checkbox])]:pr-0"
+        >
+          <button
+            class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2"
+          >
+            JVM Start Time
+            <svg
+              class="lucide lucide-arrow-up-down ml-2 h-4 w-4"
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="m21 16-4 4-4-4"
+              />
+              <path
+                d="M17 20V4"
+              />
+              <path
+                d="m3 8 4-4 4 4"
+              />
+              <path
+                d="M7 4v16"
+              />
+            </svg>
+          </button>
+        </th>
+        <th
+          class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&:has([role=checkbox])]:pr-0"
+        >
+          Actions
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      class="[&_tr:last-child]:border-0"
+    >
+      <tr
+        class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted"
+        data-state="false"
+      >
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            Agent
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            10
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            17
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            0.0.1-SNAPSHOT
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            0.0.1-SNAPSHOT
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            7/2/2024, 1:21:03 PM
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <a
+            class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2"
+            href="agent-settings/?connection=00000000-0000-0000-0000-000000000000"
+          >
+            Open
+          </a>
+        </td>
+      </tr>
+      <tr
+        class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted"
+        data-state="false"
+      >
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            Agent
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            53532
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            17
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            0.0.1-SNAPSHOT
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            0.0.1-SNAPSHOT
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            7/2/2024, 1:21:03 PM
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <a
+            class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2"
+            href="agent-settings/?connection=00000000-0000-0000-0000-000000000000"
+          >
+            Open
+          </a>
+        </td>
+      </tr>
+      <tr
+        class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted"
+        data-state="false"
+      >
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            Agent
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            11
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            17
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            0.0.1-SNAPSHOT
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            0.0.1-SNAPSHOT
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            7/2/2024, 1:21:03 PM
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <a
+            class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2"
+            href="agent-settings/?connection=00000000-0000-0000-0000-000000000000"
+          >
+            Open
+          </a>
+        </td>
+      </tr>
+      <tr
+        class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted"
+        data-state="false"
+      >
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            Agent
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            12
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            17
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            0.0.1-SNAPSHOT
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            0.0.1-SNAPSHOT
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            7/2/2024, 1:21:03 PM
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <a
+            class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2"
+            href="agent-settings/?connection=00000000-0000-0000-0000-000000000000"
+          >
+            Open
+          </a>
+        </td>
+      </tr>
+      <tr
+        class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted"
+        data-state="false"
+      >
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            Agent
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            13
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            17
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            0.0.1-SNAPSHOT
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            0.0.1-SNAPSHOT
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            7/2/2024, 1:21:03 PM
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <a
+            class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2"
+            href="agent-settings/?connection=00000000-0000-0000-0000-000000000000"
+          >
+            Open
+          </a>
+        </td>
+      </tr>
+      <tr
+        class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted"
+        data-state="false"
+      >
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            Agent
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            14
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            17
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            0.0.1-SNAPSHOT
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            0.0.1-SNAPSHOT
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            7/2/2024, 1:21:03 PM
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <a
+            class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2"
+            href="agent-settings/?connection=00000000-0000-0000-0000-000000000000"
+          >
+            Open
+          </a>
+        </td>
+      </tr>
+      <tr
+        class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted"
+        data-state="false"
+      >
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            Agent
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            15
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            17
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            0.0.1-SNAPSHOT
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            0.0.1-SNAPSHOT
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            7/2/2024, 1:21:03 PM
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <a
+            class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2"
+            href="agent-settings/?connection=00000000-0000-0000-0000-000000000000"
+          >
+            Open
+          </a>
+        </td>
+      </tr>
+      <tr
+        class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted"
+        data-state="false"
+      >
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            Agent
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            16
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            17
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            0.0.1-SNAPSHOT
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            0.0.1-SNAPSHOT
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            7/2/2024, 1:21:03 PM
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <a
+            class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2"
+            href="agent-settings/?connection=00000000-0000-0000-0000-000000000000"
+          >
+            Open
+          </a>
+        </td>
+      </tr>
+      <tr
+        class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted"
+        data-state="false"
+      >
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            Agent
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            17
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            17
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            0.0.1-SNAPSHOT
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            0.0.1-SNAPSHOT
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            7/2/2024, 1:21:03 PM
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <a
+            class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2"
+            href="agent-settings/?connection=00000000-0000-0000-0000-000000000000"
+          >
+            Open
+          </a>
+        </td>
+      </tr>
+      <tr
+        class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted"
+        data-state="false"
+      >
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            Agent
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            18
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            17
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            0.0.1-SNAPSHOT
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            0.0.1-SNAPSHOT
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            7/2/2024, 1:21:03 PM
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <a
+            class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2"
+            href="agent-settings/?connection=00000000-0000-0000-0000-000000000000"
+          >
+            Open
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>,
+]
+`;
+
+exports[`Connection Table > ConnectionsTable renders other elements at click on "next". 2`] = `
+[
+  <table
+    class="w-full caption-bottom text-sm border"
+  >
+    <thead
+      class="[&_tr]:border-b sticky top-0 bg-secondary"
+    >
+      <tr
+        class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted"
+      >
+        <th
+          class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&:has([role=checkbox])]:pr-0"
+        >
+          <button
+            class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2"
+          >
+            Service Name
+            <svg
+              class="lucide lucide-arrow-up-down ml-2 h-4 w-4"
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="m21 16-4 4-4-4"
+              />
+              <path
+                d="M17 20V4"
+              />
+              <path
+                d="m3 8 4-4 4 4"
+              />
+              <path
+                d="M7 4v16"
+              />
+            </svg>
+          </button>
+        </th>
+        <th
+          class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&:has([role=checkbox])]:pr-0"
+        >
+          <button
+            class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2"
+          >
+            Process ID
+            <svg
+              class="lucide lucide-arrow-up-down ml-2 h-4 w-4"
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="m21 16-4 4-4-4"
+              />
+              <path
+                d="M17 20V4"
+              />
+              <path
+                d="m3 8 4-4 4 4"
+              />
+              <path
+                d="M7 4v16"
+              />
+            </svg>
+          </button>
+        </th>
+        <th
+          class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&:has([role=checkbox])]:pr-0"
+        >
+          <button
+            class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2"
+          >
+            Java Version
+            <svg
+              class="lucide lucide-arrow-up-down ml-2 h-4 w-4"
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="m21 16-4 4-4-4"
+              />
+              <path
+                d="M17 20V4"
+              />
+              <path
+                d="m3 8 4-4 4 4"
+              />
+              <path
+                d="M7 4v16"
+              />
+            </svg>
+          </button>
+        </th>
+        <th
+          class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&:has([role=checkbox])]:pr-0"
+        >
+          <button
+            class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2"
+          >
+            Otel Version
+            <svg
+              class="lucide lucide-arrow-up-down ml-2 h-4 w-4"
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="m21 16-4 4-4-4"
+              />
+              <path
+                d="M17 20V4"
+              />
+              <path
+                d="m3 8 4-4 4 4"
+              />
+              <path
+                d="M7 4v16"
+              />
+            </svg>
+          </button>
+        </th>
+        <th
+          class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&:has([role=checkbox])]:pr-0"
+        >
+          <button
+            class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2"
+          >
+            Gepard Version
+            <svg
+              class="lucide lucide-arrow-up-down ml-2 h-4 w-4"
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="m21 16-4 4-4-4"
+              />
+              <path
+                d="M17 20V4"
+              />
+              <path
+                d="m3 8 4-4 4 4"
+              />
+              <path
+                d="M7 4v16"
+              />
+            </svg>
+          </button>
+        </th>
+        <th
+          class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&:has([role=checkbox])]:pr-0"
+        >
+          <button
+            class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2"
+          >
+            JVM Start Time
+            <svg
+              class="lucide lucide-arrow-up-down ml-2 h-4 w-4"
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="m21 16-4 4-4-4"
+              />
+              <path
+                d="M17 20V4"
+              />
+              <path
+                d="m3 8 4-4 4 4"
+              />
+              <path
+                d="M7 4v16"
+              />
+            </svg>
+          </button>
+        </th>
+        <th
+          class="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&:has([role=checkbox])]:pr-0"
+        >
+          Actions
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      class="[&_tr:last-child]:border-0"
+    >
+      <tr
+        class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted"
+        data-state="false"
+      >
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            Agent
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            19
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            17
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            0.0.1-SNAPSHOT
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            0.0.1-SNAPSHOT
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            7/2/2024, 1:21:03 PM
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <a
+            class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2"
+            href="agent-settings/?connection=00000000-0000-0000-0000-000000000000"
+          >
+            Open
+          </a>
+        </td>
+      </tr>
+      <tr
+        class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted"
+        data-state="false"
+      >
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            Agent
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            20
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            17
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            0.0.1-SNAPSHOT
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            0.0.1-SNAPSHOT
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            7/2/2024, 1:21:03 PM
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <a
+            class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2"
+            href="agent-settings/?connection=00000000-0000-0000-0000-000000000000"
+          >
+            Open
+          </a>
+        </td>
+      </tr>
+      <tr
+        class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted"
+        data-state="false"
+      >
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            Agent
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            21
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            17
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            0.0.1-SNAPSHOT
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            0.0.1-SNAPSHOT
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            7/2/2024, 1:21:03 PM
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <a
+            class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2"
+            href="agent-settings/?connection=00000000-0000-0000-0000-000000000000"
+          >
+            Open
+          </a>
+        </td>
+      </tr>
+      <tr
+        class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted"
+        data-state="false"
+      >
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            Agent
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            22
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            17
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            0.0.1-SNAPSHOT
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            0.0.1-SNAPSHOT
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            7/2/2024, 1:21:03 PM
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <a
+            class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2"
+            href="agent-settings/?connection=00000000-0000-0000-0000-000000000000"
+          >
+            Open
+          </a>
+        </td>
+      </tr>
+      <tr
+        class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted"
+        data-state="false"
+      >
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            Agent
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            23
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            17
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            0.0.1-SNAPSHOT
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            0.0.1-SNAPSHOT
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            7/2/2024, 1:21:03 PM
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <a
+            class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2"
+            href="agent-settings/?connection=00000000-0000-0000-0000-000000000000"
+          >
+            Open
+          </a>
+        </td>
+      </tr>
+      <tr
+        class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted"
+        data-state="false"
+      >
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            Agent
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            24
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            17
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            0.0.1-SNAPSHOT
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            0.0.1-SNAPSHOT
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            7/2/2024, 1:21:03 PM
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <a
+            class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2"
+            href="agent-settings/?connection=00000000-0000-0000-0000-000000000000"
+          >
+            Open
+          </a>
+        </td>
+      </tr>
+      <tr
+        class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted"
+        data-state="false"
+      >
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            Agent
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            25
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            17
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            0.0.1-SNAPSHOT
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            0.0.1-SNAPSHOT
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            7/2/2024, 1:21:03 PM
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <a
+            class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2"
+            href="agent-settings/?connection=00000000-0000-0000-0000-000000000000"
+          >
+            Open
+          </a>
+        </td>
+      </tr>
+      <tr
+        class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted"
+        data-state="false"
+      >
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            Agent
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            26
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            17
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            0.0.1-SNAPSHOT
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            0.0.1-SNAPSHOT
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <div
+            class="px-8"
+          >
+            7/2/2024, 1:21:03 PM
+          </div>
+        </td>
+        <td
+          class="p-4 align-middle [&:has([role=checkbox])]:pr-0"
+        >
+          <a
+            class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2"
+            href="agent-settings/?connection=00000000-0000-0000-0000-000000000000"
+          >
+            Open
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>,
+]
+`;

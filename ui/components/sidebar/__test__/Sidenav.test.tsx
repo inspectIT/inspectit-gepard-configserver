@@ -2,7 +2,6 @@ import { cleanup, fireEvent, render, screen } from "@testing-library/react";
 
 import { beforeEach, describe, expect, test, vi } from "vitest";
 import SideNav from "../Sidenav";
-import { usePathname } from "next/navigation";
 import { MdOutlineSupportAgent } from "react-icons/md";
 
 // Mock multiple NavItems

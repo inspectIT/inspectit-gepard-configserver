@@ -1,5 +1,4 @@
 import {
-  AccessorFnColumnDef,
   ColumnDef,
   getCoreRowModel,
   useReactTable,
@@ -10,15 +9,7 @@ import {
   getSortedRowModel,
   getFilteredRowModel,
 } from "@tanstack/react-table";
-import {
-  Dispatch,
-  InputHTMLAttributes,
-  SetStateAction,
-  useEffect,
-  useLayoutEffect,
-  useReducer,
-  useState,
-} from "react";
+import { Dispatch, SetStateAction, useState } from "react";
 import {
   Table,
   TableBody,
