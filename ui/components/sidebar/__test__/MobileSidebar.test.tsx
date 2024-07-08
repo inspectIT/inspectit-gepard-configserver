@@ -1,15 +1,8 @@
-import { cleanup, render } from "@testing-library/react";
-
-import { beforeEach, describe, expect, test, vi } from "vitest";
+import { render } from "@testing-library/react";
+import { describe, expect, test } from "vitest";
 import MobileSidebar from "../MobileSidebar";
 
-vi.mock("", () => {});
-
 describe("MobileSidebar Component", () => {
-  beforeEach(() => {
-    cleanup();
-  });
-
   test("Sidebar mounted", () => {
     const rerender = render(<MobileSidebar/>);
 
