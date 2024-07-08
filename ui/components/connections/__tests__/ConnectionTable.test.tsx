@@ -29,11 +29,10 @@ describe("Connection Table", () => {
       },
     });
 
-    const QueryClientProvider = ({ children }) => (
+    // eslint-disable-next-line
+    return ({ children }) => (
       <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
     );
-
-    return QueryClientProvider;
   };
 
   const mockApiCallResponse = (connectionsToReturn: Connection[]) => {
