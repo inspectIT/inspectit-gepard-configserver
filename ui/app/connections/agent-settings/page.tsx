@@ -14,7 +14,7 @@ Based on the query result, we either display the agent settings, an error messag
 TODO: Add a Spinner Component.  
 TODO: We might want to move this logic to the AgentSettingsView Component.
 */
-export default function ConnectionDetailsPage() {
+export default function AgentSettingsPage() {
   const searchParams = useSearchParams();
 
   const connectionId: string | null = searchParams.get("connection");
