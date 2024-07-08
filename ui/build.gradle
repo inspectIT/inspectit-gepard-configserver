@@ -27,6 +27,7 @@ node {
 }
 
 tasks.register("packageNpmApp", Jar) {
+    dependsOn npm_run_testNoWatch
     dependsOn npm_run_build
 
         archiveBaseName = 'ui'
@@ -38,6 +39,15 @@ tasks.register("packageNpmApp", Jar) {
         }
 
 
+}
+
+npm_run_testNoWatch {
+    inputs.files fileTree('app')
+    inputs.files fileTree('public')
+    inputs.file 'package.json'
+    inputs.file 'package-lock.json'
+
+    outputs.dir 'testResults'
 }
 
 npm_run_build {

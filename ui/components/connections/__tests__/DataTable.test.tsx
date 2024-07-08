@@ -5,9 +5,6 @@ import Page from "@/app/page";
 import Providers from "@/app/providers";
 
 import { SetStateAction } from "react";
-import { randomUUID } from "node:crypto";
-import { connectionColumns } from "../components/ConnectionColumns";
-import { NIL as NIL_UUID } from "uuid";
 import { Connection } from "../interfaces/Connection";
 import DataTable from "@/components/shared/shadcn/DataTable";
 import { TestConnectionsBig } from "./TestConnections";
