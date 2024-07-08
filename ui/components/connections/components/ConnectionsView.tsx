@@ -1,18 +1,19 @@
 "use client";
-import { useConnections } from "./useConnections";
-import DataTable from "../shadcn/DataTable";
+import { useConnections } from "../hooks/useConnections";
+
+import { useState } from "react";
+import { connectionColumns } from "./ConnectionColumns";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "../shadcn/card";
-import { useState } from "react";
-import { connectionColumns } from "./ConnectionColumns";
-import DebouncedInput from "../ui/DebouncedInput";
+} from "@/components/shared/shadcn/card";
+import DebouncedInput from "@/components/shared/atoms/DebouncedInput";
+import DataTable from "@/components/shared/shadcn/DataTable";
 
-export default function ConnectionTable() {
+export default function ConnectionsView() {
   const connectionsQuery = useConnections();
 
   const [globalFilter, setGlobalFilter] = useState("");

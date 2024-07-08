@@ -1,5 +1,4 @@
 import { expect, test, describe, vi, beforeEach } from "vitest";
-import ConnectionTable from "../ConnectionTable";
 import {
   cleanup,
   fireEvent,
@@ -9,9 +8,11 @@ import {
   waitFor,
 } from "@testing-library/react";
 import { TestConnectionsBig, TestConnectionsSmall } from "./TestConnections";
-import { useConnections } from "../useConnections";
+import { useConnections } from "../hooks/useConnections";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { Connection } from "../Connection";
+import { Connection } from "../interfaces/Connection";
+import ConnectionsView from "../components/ConnectionsView";
+
 const nock = require("nock");
 
 describe("Connection Table", () => {
@@ -61,7 +62,7 @@ describe("Connection Table", () => {
 
     render(
       <Wrapper>
-        <ConnectionTable />
+        <ConnectionsView />
       </Wrapper>
     );
 
@@ -78,7 +79,7 @@ describe("Connection Table", () => {
     mockApiCallResponse(TestConnectionsBig);
     render(
       <Wrapper>
-        <ConnectionTable />
+        <ConnectionsView />
       </Wrapper>
     );
 
@@ -95,7 +96,7 @@ describe("Connection Table", () => {
     mockApiCallResponse(TestConnectionsBig);
     render(
       <Wrapper>
-        <ConnectionTable />
+        <ConnectionsView />
       </Wrapper>
     );
     const Table = await waitFor(() => screen.getByRole("table"));

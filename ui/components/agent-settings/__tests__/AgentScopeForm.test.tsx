@@ -1,6 +1,6 @@
 import { describe, expect, test } from "vitest";
 import { render } from "@testing-library/react";
-import AgentScopeForm from "../AgentScopeForm";
+import AgentScopeForm from "../components/AgentScopeForm";
 
 describe("AgentScopeForm Page", () => {
   test("matches snapshot", () => {

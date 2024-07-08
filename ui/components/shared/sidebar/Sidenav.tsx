@@ -12,6 +12,9 @@ interface SideNavProps {
   setOpen?: (open: boolean) => void;
 }
 
+/*
+A SideNav component that displays a list of NavItems.
+*/
 export default function SideNav({ items, className, setOpen }: SideNavProps) {
   const path = usePathname();
   const { isOpen } = useSidebarStore();

@@ -7,6 +7,10 @@ import { Boxes } from "lucide-react";
 import MobileSidebar from "../sidebar/MobileSidebar";
 import { ThemeToggle } from "./ThemeToggle";
 
+/* 
+A Header component that displays the app name and a theme toggle button. 
+As soon the viewport is smaller than md, the sidebar is hidden and a mobile sidebar is shown in the header.
+*/
 export default function Header() {
   return (
     <div className="supports-backdrop-blur:bg-background/60 fixed left-0 right-0 top-0 z-20 border-b bg-background/95 backdrop-blur">

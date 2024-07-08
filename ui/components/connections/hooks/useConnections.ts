@@ -1,8 +1,10 @@
 "use client";
 import { useQuery, UseQueryResult } from "@tanstack/react-query";
-import { getconnectionById, getconnections } from "./ConnectionQueries";
-import { UUID } from "crypto";
-import { Connection } from "./Connection";
+import {
+  getconnectionById,
+  getconnections,
+} from "../queries/ConnectionQueries";
+import { Connection } from "../interfaces/Connection";
 
 export const useConnections = () => {
   return useQuery({

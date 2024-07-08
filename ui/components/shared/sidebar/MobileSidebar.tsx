@@ -4,6 +4,11 @@ import { MenuIcon } from "lucide-react";
 import SideNav from "./Sidenav";
 import { NAV_ITEMS } from "./NavItems";
 
+/*
+This components is used, if the viewport is smaller than md.
+Also includes the SideNav component, like Sidebar.
+But only opens up on click on the MenuIcon (Burger Button).
+*/
 export default function MobileSidebar() {
   const [open, setOpen] = useState(false);
 

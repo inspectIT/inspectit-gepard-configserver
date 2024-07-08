@@ -2,14 +2,16 @@ import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/shadcn/card";
-import { Connection } from "../Connection";
+} from "@/components/shared/shadcn/card";
+import { Connection } from "../../connections/interfaces/Connection";
+
 export interface AgentDetailsProps {
   connection: Connection;
 }
+
+/* All the details of the agent are displayed in this component as a Card. */
 export default function AgentDetails({ connection }: AgentDetailsProps) {
   return (
     <Card className="p-2">

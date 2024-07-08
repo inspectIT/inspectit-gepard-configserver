@@ -1,7 +1,7 @@
 import { ColumnDef } from "@tanstack/react-table";
-import SortableTableColumn from "../ui/SortableTableColumn";
-import { Connection } from "./Connection";
-import ConnectionTableActions from "./ConnectionTableActions";
+import { Connection } from "../interfaces/Connection";
+import ConnectionsTableActionCell from "./ConnectionsTableActionCell";
+import SortableTableColumn from "@/components/shared/atoms/SortableTableColumn";
 
 export const connectionColumns: ColumnDef<Connection>[] = [
   {
@@ -67,7 +67,7 @@ export const connectionColumns: ColumnDef<Connection>[] = [
     header: "Actions",
     cell: ({ row }) => {
       const connection = row.original;
-      return <ConnectionTableActions id={connection.id} />;
+      return <ConnectionsTableActionCell id={connection.id} />;
     },
   },
 ];

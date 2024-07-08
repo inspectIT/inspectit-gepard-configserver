@@ -1,11 +1,11 @@
+import { buttonVariants } from "@/components/shared/shadcn/button";
 import { UUID } from "crypto";
 import Link from "next/link";
-import { buttonVariants } from "../shadcn/button";
 
 interface connectionTableActionsProps {
   id: UUID;
 }
-export default function connectionTableActions({
+export default function ConnectionTableActionCell({
   id,
 }: connectionTableActionsProps) {
   return (

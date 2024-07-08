@@ -3,6 +3,7 @@ import { useTheme } from "next-themes";
 import { Button } from "../shadcn/button";
 import { Moon, Sun } from "lucide-react";
 
+// A theme toggle button that toggles between light and dark mode.
 export function ThemeToggle() {
   const { theme, setTheme } = useTheme();
   return (

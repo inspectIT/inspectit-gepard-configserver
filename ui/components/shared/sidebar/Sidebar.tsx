@@ -1,14 +1,20 @@
 "use client";
 import { useState } from "react";
-import { useSidebarStore } from "@/components/sidebar/useSidebarStore";
 import { BsArrowLeftShort } from "react-icons/bs";
 import SideNav from "./Sidenav";
 import { NAV_ITEMS } from "./NavItems";
 import { cn } from "@/lib/utils";
+import { useSidebarStore } from "./useSidebarStore";
 interface SidebarProps {
   className?: string;
 }
 
+/*
+Sidebar component that displays the navigation items.
+As soon the viewport is smaller than md, the sidebar is hidden and a mobile sidebar is shown in the header.
+You can toggle the sidebar with the arrow icon.
+The big version with a width of 52rem is default. Toggling the sidebar will change the width to 78px and only show the Icon.
+*/
 export default function Sidebar({ className }: SidebarProps) {
   const { isOpen, toggle } = useSidebarStore();
   const [status, setStatus] = useState(false);

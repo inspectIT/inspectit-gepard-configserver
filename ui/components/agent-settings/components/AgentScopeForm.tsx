@@ -4,9 +4,13 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/shadcn/card";
+} from "@/components/shared/shadcn/card";
 import { UUID } from "crypto";
 
+/*
+ * AgentScopeForm component is a form that allows the user to configure the scope of an agent.
+ * It displays an input field and a list of classes that the agent configures.
+ */
 export default function AgentScopeForm({
   connectionId,
 }: {
