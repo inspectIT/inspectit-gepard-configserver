@@ -12,3 +12,6 @@ It´s purpose is to replace the InspectIT Ocelot project with a more modern and 
 ## Getting Started
 Currently the project is in an early stage of development and not yet ready for production use.
 However, if you want to try it out, you can follow the instructions in [How to build](./docs/how-to-build.md).
+
+## Useful Links
+- [SonarCloud]("https://sonarcloud.io/")
