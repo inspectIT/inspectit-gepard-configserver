@@ -1,12 +1,20 @@
 "use client";
 
-import AgentSettingsView from "@/components/connections/agent-settings/AgentSettingsView";
-import { Connection } from "@/components/connections/Connection";
-import { useConnection } from "@/components/connections/useConnections";
+import AgentSettingsView from "@/components/agent-settings/components/AgentSettingsView";
+import { useConnection } from "@/components/connections/hooks/useConnections";
+import { Connection } from "@/components/connections/interfaces/Connection";
 import { UseQueryResult } from "@tanstack/react-query";
 import { useSearchParams } from "next/navigation";
 
-export default function ConnectionDetailsPage() {
+/*
+This page is responsible for displaying the agent settings of a connection.
+Based on the querystring parameter "connection" it fetches the connection.
+We use queryStrings, since static exports do not support dynamic routes.
+Based on the query result, we either display the agent settings, an error message or a Loading Components.
+TODO: Add a Spinner Component.  
+TODO: We might want to move this logic to the AgentSettingsView Component.
+*/
+export default function AgentSettingsPage() {
   const searchParams = useSearchParams();
 
   const connectionId: string | null = searchParams.get("connection");

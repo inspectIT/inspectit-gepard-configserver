@@ -1,13 +1,13 @@
 import { Suspense } from "react";
 
-export default function connectionDetailsLayout({
-  children, // will be a page or nested layout
-}: {
+/*
+  This Layout is needed, because we use useParams to get the connectionId.
+    This is not possible (not recommended) without a Suspense boundary.
+*/
+export default function AgentSettingsLayout({
+  children,
+}: Readonly<{
   children: React.ReactNode;
-}) {
-  return (
-    <Suspense>
-      <section className="px-8 py-4">{children}</section>
-    </Suspense>
-  );
+}>) {
+  return <Suspense>{children}</Suspense>;
 }

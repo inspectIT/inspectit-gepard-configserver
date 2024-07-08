@@ -11,6 +11,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="17">
+      <module name="config-server" target="21" />
       <module name="rocks.inspectit.gepard.inspectit-gepard-configserver" target="17" />
       <module name="rocks.inspectit.gepard.inspectit-gepard-configserver.main" target="17" />
       <module name="rocks.inspectit.gepard.inspectit-gepard-configserver.test" target="17" />

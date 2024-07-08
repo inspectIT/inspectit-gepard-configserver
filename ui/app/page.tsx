@@ -1,5 +1,10 @@
+import { redirect } from "next/navigation";
+
+/*
+Home page redirects to the connections page.
+*/
 export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24"></main>
+  redirect(
+    process.env.NODE_ENV === "production" ? "ui/connections/" : "connections"
   );
 }

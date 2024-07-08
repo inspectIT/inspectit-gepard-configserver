@@ -3,14 +3,11 @@ import { cleanup, render, screen } from "@testing-library/react";
 import Page from "@/app/page";
 
 import Providers from "@/app/providers";
-import ConnectionTable from "../ConnectionTable";
-import DataTable from "@/components/shadcn/DataTable";
+
 import { SetStateAction } from "react";
-import { randomUUID } from "node:crypto";
-import { connectionColumns } from "../ConnectionColumns";
-import { NIL as NIL_UUID } from "uuid";
-import { Connection } from "../Connection";
-import { TestConnections } from "./TestConnections";
+import { Connection } from "../interfaces/Connection";
+import DataTable from "@/components/shared/shadcn/DataTable";
+import { TestConnectionsBig } from "./TestConnections";
 
 const setup = (data: Connection[]) => {
   return render(
@@ -49,7 +46,7 @@ describe("Data Table No Data", () => {
 describe("Data Table with Data", () => {
   let containerWithData: HTMLElement;
   beforeEach(() => {
-    const renderedDom = setup(TestConnections);
+    const renderedDom = setup(TestConnectionsBig);
     containerWithData = renderedDom.container;
   });
 
