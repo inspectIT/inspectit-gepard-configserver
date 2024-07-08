@@ -15,8 +15,11 @@ import { Connection } from "../Connection";
 const nock = require("nock");
 
 describe("Connection Table", () => {
+  let Wrapper: ({ children }: { children: any }) => JSX.Element;
+
   beforeEach(() => {
     cleanup();
+    Wrapper = createWrapper();
   });
 
   const createWrapper = () => {
@@ -48,7 +51,7 @@ describe("Connection Table", () => {
   test("useConnections return data", async () => {
     mockApiCallResponse(TestConnectionsSmall);
     const { result } = renderHook(() => useConnections(), {
-      wrapper: createWrapper(),
+      wrapper: Wrapper,
     });
 
     await waitFor(() => expect(result.current.isSuccess).toBe(true));
@@ -57,7 +60,6 @@ describe("Connection Table", () => {
 
   test("ConnectionsTable renders all connections", async () => {
     mockApiCallResponse(TestConnectionsSmall);
-    const Wrapper = createWrapper();
 
     render(
       <Wrapper>
@@ -74,7 +76,6 @@ describe("Connection Table", () => {
   });
 
   test("ConnectionsTable renders not more than 10 Elements", async () => {
-    const Wrapper = createWrapper();
     mockApiCallResponse(TestConnectionsBig);
     render(
       <Wrapper>
@@ -91,7 +92,6 @@ describe("Connection Table", () => {
   });
 
   test('ConnectionsTable renders other elements at click on "next" and "previous".', async () => {
-    const Wrapper = createWrapper();
     mockApiCallResponse(TestConnectionsBig);
     render(
       <Wrapper>
