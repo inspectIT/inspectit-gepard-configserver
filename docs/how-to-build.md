@@ -14,6 +14,10 @@ To build the project, simply run the following command in the root directory of 
 ```shell
 ./gradlew 
 ```
+
+> [!TIP]  
+> You might have installed an auto-formatter in your IDE. It may break the installed spotless code-style. In this case, the build will not be successfull. Please run ```./gradlew :server:spotlessApply``` to fix this issue.
+
 ## In depth explanation for developers
 The project currently consists of three modules:
 
